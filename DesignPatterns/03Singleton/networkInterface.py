@@ -19,10 +19,27 @@ class NetworkFile(object):
         return data+'\n'
 
 
-class FakeServer(object):
+_SERVER = None
+
+
+def FakeServer(adress, port):
+    global _SERVER
+    if not _SERVER:
+        _SERVER = _FakeServer(adress, port)
+    return _SERVER
+
+
+class _FakeServer(object):
     def __init__(self, address, port):
         pass
+
     def httpGet(self, resourceName):
         return open(resourceName, 'r').read()
+
+
+if __name__ == '__main__':
+    srvr1 = FakeServer('localhost', 8080)
+    srvr2 = FakeServer('localhost', 8080)
+    print('Names point to the same instace? ', srvr1 is srvr2)
 
 
