@@ -8,6 +8,14 @@ myList.extend([1, 2, 3])
 myList.pop()
 myList.pop(0)
 1 in myList
+myList.append(5)
+myList.remove(5)
+del myList[-1]
+myList[0]
+
+myList[1:3]
+myList[:-1]
+myList[:]
 
 
 # Immutable lists. Use for constants. Make understanding code easier.
@@ -20,6 +28,9 @@ set()
 mySet = {1, 2, 3}
 mySet2 = {2, 3, 4}
 1 in mySet
+mySet2.add(5)
+mySet2.difference(5)
+
 print(mySet.union(mySet2))
 print(mySet.intersection(mySet2))
 print(mySet.difference(mySet2))
@@ -38,4 +49,8 @@ for key, value in myDict.items():
 
 for key in myDict.keys():
     print(key, value)
+
+listOfKeys = [1,2,3,4,5]
+listOfValues = [1,2,3,4,5]
+mySquares = {key: value**2 for key, value in zip(listOfKeys, listOfValues)}
 
