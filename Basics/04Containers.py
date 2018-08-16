@@ -17,7 +17,6 @@ myList[1:3]
 myList[:-1]
 myList[:]
 
-
 # Immutable lists. Use for constants. Make understanding code easier.
 tuple()
 myTuple = (1, 2, 3)
@@ -50,7 +49,6 @@ for key, value in myDict.items():
 for key in myDict.keys():
     print(key, value)
 
-listOfKeys = [1,2,3,4,5]
-listOfValues = [1,2,3,4,5]
-mySquares = {key: value**2 for key, value in zip(listOfKeys, listOfValues)}
-
+listOfKeys = [1, 2, 3, 4, 5]
+listOfValues = [1, 2, 3, 4, 5]
+mySquares = {key: value ** 2 for key, value in zip(listOfKeys, listOfValues)}

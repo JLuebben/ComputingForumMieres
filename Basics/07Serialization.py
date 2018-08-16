@@ -1,5 +1,6 @@
 import pickle
 
+
 class MyObject(object):
     def __init__(self, value):
         self.a = value

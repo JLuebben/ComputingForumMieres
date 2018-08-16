@@ -37,11 +37,23 @@ print(0 < 1 < 2)
 for i in range(10):
     oddOrEven(i)
 
+myList = ['a', 'b', 'c']
+for item in myList:
+    print(item)
+
 # Don't do this in Python. This is ugly.
 i = 0
 while i < 10:
     oddOrEven(i)
     i += 1
+
+for i, item in enumerate(myList):
+    print(i, item)
+
+
+myList2 = ['e', 'f', 'g']
+for item1, item2 in zip(myList, myList2):
+    print(item, item2)
 
 # The only 'good' reason to use 'while' statements is in a case like this:
 veryRareCondition = True

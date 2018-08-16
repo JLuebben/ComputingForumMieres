@@ -12,4 +12,4 @@ def main(fileHandle, useLegacyLib=False):
 
 if __name__ == '__main__':
     fileHandle = open('dummy.txt', 'r')
-    main(fileHandle, useLegacyLib=False)
+    main(fileHandle, useLegacyLib=True)
